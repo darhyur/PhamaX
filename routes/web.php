@@ -82,6 +82,8 @@ Route::prefix('backEnd')-> group(function (){
               Route::prefix('unit')-> group(function () {
                   Route::get('/', ['uses' =>'UnitController@index', 'as' => 'backEnd.admin.unit.index']);
                   Route::get('/create',  ['uses' =>'UnitController@create', 'as' => 'backEnd.admin.unit.create']);
+//                  Route::get('/brandCreate', 'UnitController@getBrand')->name;
+                  Route::get('/brandCreate/{id}',  ['uses' =>'UnitController@getBrand', 'as' => 'unit.getBrand']);
                   Route::get('/list',  ['uses' =>'UnitController@lists', 'as' => 'backEnd.admin.unit.list']);
                   Route::post('/',  ['uses' =>'UnitController@store', 'as' => 'backEnd.admin.unit.store']);
                   Route::get('/{id}',  ['uses' =>'UnitController@show', 'as' => 'backEnd.admin.unit.show']);

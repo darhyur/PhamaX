@@ -1,7 +1,7 @@
 <!Doctype>
 <html lang="en">
 <head>
-   @include('layouts.head')
+    @include('layouts.newhead')
 </head>
 {{--<body class="bgded overlay" style="background-color:blueviolet;height:120px;">--}}
 <body>
@@ -76,4 +76,3 @@
 </body>
 
 </html>
-

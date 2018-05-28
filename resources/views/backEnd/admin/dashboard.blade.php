@@ -1,5 +1,9 @@
 @extends('layouts.Adminnn')
 
+@section('back_end_dashboard')
+    class="active"
+@endsection
+
 
 @section('title')
 

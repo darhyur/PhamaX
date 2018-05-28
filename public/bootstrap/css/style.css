@@ -121,7 +121,7 @@ div.gallery {
 
 }
 .card .card-title {
-    position: absolute;
+    position:relative;
     bottom: 15px;
     left: 15px;
     color: #fff;
@@ -373,7 +373,7 @@ form.example::after {
 .footer {
     position:relative;
     bottom:0;
-    background-color: #52c4cd;
+    background-color: #9c27b0;
     width: 100%;
     color:white;
 }

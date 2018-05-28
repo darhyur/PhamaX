@@ -16,7 +16,7 @@ Tip 2: you can also add an image using data-image tag
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li>
+            <li @yield('back_end_dashboard')>
                 <a href="{{ route('backEnd.admin.dashboard') }}">
                     <i class="material-icons">dashboard</i>
                     <p>Dashboard</p>

@@ -22,29 +22,28 @@
         <br>
         <br>
         <br>
-        <div class="login">
-            <div>
 
-                <button type="button" class="btn btn-success">xxxxxx</button>
 
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3"> Admin Access <span class="glyphicon-log-in"></span></button><br>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">New Admin Access <span class="glyphicon-log-in"></span></button>
-
-            </div>
-            <div class="row">
-                <div class="col-md-5 col-md-offset-4">
-                    <div class="bottom-message">
-                        <button type="button" class="btn btn-success">xxxxxx</button>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-dm-3">
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Admin Access <span class="glyphicon-log-in"></span></button><br>
-                        {{--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">New Admin Access <span class="glyphicon-log-in"></span></button>--}}
-
-                        <p>Tha adverse effect of fake and expired drugs can't be quantify
-                            kindly confirm the authenticity of our products on
-                            <a href="" ><span style="font-weight:bold">Drug Authentication System</span></a>.before usage </p>
+                    </div>
+                    <div class="col-md-3 col-md-offset-6">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">New Admin Access <span class="glyphicon-log-in"></span></button>
                     </div>
                 </div>
+            <div>
             </div>
+            {{--<div class="row">--}}
+                {{--<div class="col-md-5 col-md-offset-4">--}}
+                    {{--<div class="bottom-message">--}}
+                             {{--<p>Tha adverse effect of fake and expired drugs can't be quantify--}}
+                            {{--kindly confirm the authenticity of our products on--}}
+                            {{--<a href="" ><span style="font-weight:bold">Drug Authentication System</span></a>.before usage </p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
 
 
@@ -65,7 +64,7 @@
                                 {!! csrf_field() !!}
 
                                 <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                    <label class="col-md-3 control-label">UsernamEEss</label>
+                                    <label class="col-md-3 control-label">Username</label>
 
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" name="username" value="{{ old('username') }}">

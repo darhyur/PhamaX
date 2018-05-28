@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Unit;
+use App\Brand;
+use App\Product;
+
 use Illuminate\Http\Request;
 
 class UnitController extends Controller
@@ -24,11 +27,79 @@ class UnitController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
+     *
+     *
+     *
      */
+
+
+    public function getBrand($id)
+    {
+        $dynamicBrand = Brand::where('id', '=', $id)->get();
+        $options = array();
+
+        $brandProducts = Product::where('brand_id', '=', $id)->get();
+//        foreach ($dynamicBrand as $dBrand) {
+//            $options += array($dBrand->brand_id => $dBrand->name);
+//        }
+
+        return $brandProducts;
+//        return Response::json($options);
+    }
+
+
+
     public function create()
     {
-        return view('backEnd.admin.unit.create');
+
+
+
+
+        $brandLists =Brand::all();
+
+
+        return view('backEnd.admin.unit.create',['brandLists'=> $brandLists]);
+
+           }
+
+           public  function fetch(Request $request){
+
+        $data = Product::select('name','id')->where('brand_id',$request->brand_id)
+        ->get();
+
+
+        return response()->json($data);
+//        $value = $request->get('value');
+//        $dependent = $request->get('dependent');
+//        $data = DB::table('product')
+//            ->where($select, $value)
+//            ->groupBy($dependent)
+//            -> get();
+//        $output = '<option value="$data">select '.ucfirst($dependent).'</option>';
+//        foreach ($data as $row)
+//        {
+//             $output .= '<option value="data" ' .$row->$dependent.'">
+//             '.$row->$dependent. '</option>';
+//
+//        }
+//
+//
+//        echo $output;
+
+
+           }
+
+
+
+    public function product(){
+
+        $brandLists =Brand::all();
+
+
+//        $productLists = Product::all();
+        return view('backEnd.admin.unit.create',['brandLists'=> $brandLists, 'brands'=>$brands]);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -66,6 +137,16 @@ class UnitController extends Controller
     {
         $unit=Unit::find($id);
         return view('backEnd.admin.unit.show', ['unit'=> $unit]);
+    }
+
+    public function productName(Request $request){
+
+        $data = Product::select('name', 'id')->where ('brand_id', $request)
+        ->get();
+
+        return response()->json($data);
+
+
     }
 
     /**

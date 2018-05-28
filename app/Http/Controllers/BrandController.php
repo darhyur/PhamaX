@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Brand;
+use App\Admin;
 use Collective\Html\HtmlFacade;
 
 
@@ -36,10 +37,7 @@ class BrandController extends Controller
     public function create()
     {
 
-        $brand_name=brand::all();
-
-
-//        $brand_name=brand::all($brand_name);
+//                $brand_name=brand::all('name');
 
         return view('backEnd.admin.brand.create');
 
@@ -167,6 +165,8 @@ class BrandController extends Controller
 
     public function lists()
     {
+
+//        $admins = admin::name();
 
         $brands=brand::all();
         return view('backEnd.admin.brand.list', ['brands'=> $brands]);

@@ -13,13 +13,15 @@ class AdminController extends Controller
     public function index(){
 
 
-        $user = auth()->guard('admin')->user();
-        ($user);
+//        $user = auth()->guard('admin')->user();
+//        ($user);
 
         return view('backEnd.index');
     }
 
     public function dashboard(){
+
+
 
 
         $brands=Brand::all();
@@ -29,6 +31,7 @@ class AdminController extends Controller
         $productNo=Product::count();
         $units=Unit::all();
         $unitNo=Unit::count();
+
 
 
         return view('backEnd.admin.dashboard',[

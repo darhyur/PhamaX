@@ -1,4 +1,4 @@
-<nav class="navbar navbar-info navbar-static-top container-fluid">
+<nav class="navbar navbar-info navbar-static-top container">
     {{--<div class="container">--}}
         <div class="navbar-header">
 

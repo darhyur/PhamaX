@@ -36,18 +36,12 @@
                             <div class="card-content">
                                 <div class="row">
                                         <div class="col-md-4 gallery">
-
-
-
-                                            <img src="{{ $product->name')}}" alt="Phamax MD" style="width:100%;height:200px">
-                                            <img src="{{ $product->name')}}" alt="Phamax MD" style="width:100%;height:200px">
-
+                                            <img src="{{ $product->product_image')}}" alt="Phamax MD" style="width:100%;height:200px">
+                                           
                                             <div class="desc">
                                                 <h4 class="title">{{ $product->name }}</h4>
-
                                             </div>
                                         </div>
-
                                         <div class="col-md-4 product_description">
                                             <br>
                                             <br>
@@ -63,9 +57,7 @@
 
                                                 <dl>
                                                 <dt>Brand </dt>
-                                                <dd> @php
-
-                                                 @endphp
+                                                <dd> 
                                                     {{ $product->brand->brand_name}}
                                                 </dd>
                                             </dl>
@@ -73,8 +65,6 @@
                                         </div>
 
                                 </div>
-
-
 
                          </div>
                         </div>

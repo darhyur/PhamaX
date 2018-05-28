@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Product;
+use App\Unit;
 use App\Brand;
 use Illuminate\Http\Request;
 use Image;
@@ -76,6 +77,12 @@ class ProductController extends Controller
         return redirect('backEnd/product/create');
 
 
+    }
+
+    public function product(){
+
+        $productList = Product::all();
+        return view('backEnd/unit/create',['product'=> $productList]);
     }
 
     /**
